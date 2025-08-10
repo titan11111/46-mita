@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>白磁の匙 - 第一章</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="gameContainer">
+    <!-- HUD -->
+    <div id="hud">
+      <div class="hud-item">
+        <span>家事力:</span>
+        <div class="gauge"><div class="gauge-fill" id="hkGauge"></div></div>
+        <span id="hkValue">0</span>
+      </div>
+      <div class="hud-item">
+        <span>探偵力:</span>
+        <div class="gauge"><div class="gauge-fill" id="detGauge"></div></div>
+        <span id="detValue">0</span>
+      </div>
+      <div class="hud-item">
+        <span>手がかり:</span><span id="clueValue">0</span>
+      </div>
+      <div class="hud-item">
+        <span>疑惑度:</span><span id="susValue">0</span>
+      </div>
+    </div>
+
+    <!-- UI -->
+    <button id="logBtn" onclick="toggleLog()">LOG</button>
+    <button id="skipBtn" onclick="toggleSkip()">SKIP</button>
+
+    <!-- 背景 -->
+    <div id="background"></div>
+
+    <!-- テキスト -->
+    <div id="textArea">
+      <div id="speakerName"></div>
+      <div id="mainText">クリックしてゲームを開始</div>
+    </div>
+
+    <!-- 選択肢 -->
+    <div id="choiceArea"></div>
+
+    <!-- ゲームメニュー -->
+    <div id="gameMenu">
+      <button onclick="saveGame()">セーブ</button>
+      <button onclick="loadGame()">ロード</button>
+      <button onclick="showSettings()">設定</button>
+    </div>
+
+    <!-- バックログ -->
+    <div id="logPanel">
+      <div id="logHeader">
+        <h3>バックログ</h3>
+        <button onclick="toggleLog()">閉じる</button>
+      </div>
+      <div id="logContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
