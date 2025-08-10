@@ -213,7 +213,7 @@ function endByFormula(reason){
   const E=state.evid, T=state.trust, S=state.shadow;
 
   if(E>=5 && S>=3 && T>=1) return showEnding(1,
-    '来客のために整えた応接室。銀のスプーン、写真立て、紙切れ。全員の顔色が変わった。何も言わずに湯を沸かしに戻る。', 'END_REPRISE');
+    '来客のために整えた応接室。銀のスプーン、写真立て、紙切れ。全員の顔色が変わった。何も言わずに湯を沸かしに戻る。', 'END_REPRISE'); // 修正: 誤って分割されていた文字列を修正
 
   if(E>=4 && T<=-1) return showEnding(4,
     '応接の空気は氷のように冷たくなった。「あなたには、もうお願いできません」玄関で靴紐が震えた。', 'END_REPRISE');
