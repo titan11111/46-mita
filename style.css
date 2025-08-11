@@ -48,7 +48,7 @@ body {
 }
 #controls button:hover{ background:rgba(40,44,52,.9); }
 
-/* デバッグ */
+/* デバッグパネル */
 .hidden{ display:none; }
 #debugPanel{
   position:absolute; top:16px; left:16px; z-index:8;
@@ -57,13 +57,17 @@ body {
 }
 #debugPanel div{ margin:2px 0; }
 
-/* ログ */
+/* ログ（案②：初期は非表示、.show で表示） */
 #logPanel{
   position:absolute; inset:0; z-index:9; background:rgba(6,9,12,.95);
-  display:flex; flex-direction:column;
+  display:none;                         /* ← ここを none に固定 */
+  flex-direction:column;
 }
-#logHeader{ display:flex; justify-content:space-between; align-items:center; padding:14px 16px;
-  border-bottom:1px solid rgba(255,255,255,.08); }
+#logPanel.show{ display:flex; }         /* ← 表示トグル用クラス */
+#logHeader{
+  display:flex; justify-content:space-between; align-items:center; padding:14px 16px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
 #logHeader h3{ font-size:16px; color:#bcd1ff; }
 #logContent{ padding:14px 16px; overflow:auto; }
 .log-entry{ margin-bottom:10px; padding-bottom:8px; border-bottom:1px dashed rgba(255,255,255,.06); }
